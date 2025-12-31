@@ -11,7 +11,7 @@ const Navlink = ({ href, children }: { href: string; children: ReactNode }) => {
     ? pathname === "/"
     : pathname === href || pathname.startsWith(`${href}/`);
 
-  console.log(pathname,href)
+  // console.log(pathname,href)
   return (
     <Link className={`ms-2 ${isActive?"text-green-300":""}`} href={href}>
       {children}
