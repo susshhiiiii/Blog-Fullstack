@@ -14,7 +14,7 @@ const Register = () => {
     
 
     try {
-      const res=await fetch("")
+      
     } catch (err) {
       setError(true);
     }

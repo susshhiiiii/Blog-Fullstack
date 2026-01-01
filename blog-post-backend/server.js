@@ -4,6 +4,7 @@ import { ConnectDb } from "./src/config/db.js";
 import { NotFoundMiddleware } from "./src/middlewares/notFoundHandler.js";
 import { ErrorHandlerMiddleware } from "./src/middlewares/errorHandler.js";
 import { PostRouter } from "./src/routes/postRouter.js";
+import { AuthRouter } from "./src/routes/authRouter.js";
 
 dotenv.config();
 await ConnectDb();
@@ -12,6 +13,7 @@ const app = express();
 
 //Routes
 app.use("/api/post", PostRouter);
+app.use("api/auth",AuthRouter)
 
 //Middlewares
 app.use(express.json());
